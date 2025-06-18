@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({ bgGray = true }) => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className={`${bgGray ? 'bg-gray-900' : ''} text-white py-8`}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Contact Information */}

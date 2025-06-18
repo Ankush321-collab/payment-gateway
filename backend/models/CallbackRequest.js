@@ -18,7 +18,7 @@ const callbackRequestSchema = new mongoose.Schema({
   enquiryFor: {
     type: String,
     required: true,
-    enum: ['Online Courses (Website)', 'Offline Courses', 'Career Counseling', 'Other'],
+    enum: ['Online Courses (Website)', 'Offline Courses', 'Career Counseling', 'Corporate Training', 'Other'],
     default: 'Online Courses (Website)'
   },
   status: {

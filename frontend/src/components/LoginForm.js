@@ -24,11 +24,7 @@ const LoginForm = ({ userType }) => {
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
       
-      if (selectedLoginType === 'admin') {
-        navigate('/admin/callbacks');
-      } else {
-        navigate('/dashboard');
-      }
+      navigate('/dashboard');
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed. Please check your credentials.');
     } finally {

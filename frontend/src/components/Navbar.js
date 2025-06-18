@@ -40,7 +40,7 @@ const fireAnimationStyle = `<style>
 </style>`;
 document.head.insertAdjacentHTML('beforeend', fireAnimationStyle);
 
-const Navbar = () => {
+const Navbar = ({ bgBlackOnlyOnDashboard }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userName, setUserName] = useState('');
@@ -105,7 +105,7 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      className="bg-transparent text-white p-4 relative z-20"
+      className={`${bgBlackOnlyOnDashboard ? 'bg-black' : 'bg-transparent'} text-white p-4 relative z-20`}
       variants={navbarVariants}
       initial="hidden"
       animate="visible"
