@@ -26,11 +26,26 @@ const callbackRequestSchema = new mongoose.Schema({
     enum: ['Pending', 'Contacted', 'Resolved'],
     default: 'Pending'
   },
+  isViewed: {
+    type: Boolean,
+    default: false
+  },
+  viewedAt: {
+    type: Date,
+    default: null
+  },
+  deleteAt: {
+    type: Date,
+    default: null
+  },
   createdAt: {
     type: Date,
     default: Date.now
   }
 });
+
+// Add a TTL index to automatically delete documents after deleteAt
+callbackRequestSchema.index({ deleteAt: 1 }, { expireAfterSeconds: 0 });
 
 const CallbackRequest = mongoose.model('CallbackRequest', callbackRequestSchema);
 
