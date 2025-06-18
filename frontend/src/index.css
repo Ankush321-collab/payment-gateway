@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-gradient-dark {
+  background: radial-gradient(ellipse at center, #174c3c 0%, #111311 70%, #0e0e0e 100%);
+} 
