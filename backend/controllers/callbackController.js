@@ -21,7 +21,14 @@ exports.submitCallbackRequest = async (req, res) => {
     res.status(201).json({ message: 'Callback request submitted successfully!', request: newRequest });
   } catch (error) {
     console.error('Error submitting callback request:', error);
-    res.status(500).json({ message: 'Server error, please try again later.' });
+    if (error.name === 'ValidationError') {
+      const messages = Object.values(error.errors).map(val => val.message);
+      return res.status(400).json({ message: messages.join(', ') });
+    }
+    res.status(500).json({ 
+      message: 'An unexpected server error occurred.',
+      error: error.message 
+    });
   }
 };
 

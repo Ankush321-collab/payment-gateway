@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+
 import { FiArrowUpRight, FiTrendingUp, FiBookOpen } from 'react-icons/fi';
+import Footer from '../components/Footer';
 
 const Home = () => {
   const [hovered, setHovered] = useState(false);
@@ -40,6 +42,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-dark-home text-white overflow-hidden relative">
       <Navbar />
+     
       <div className="container mx-auto py-16 px-4 md:px-8 relative z-10">
         {/* Top Right Arrow Icon */}
         <motion.div 

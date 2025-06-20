@@ -9,6 +9,7 @@ import Profile from './pages/Profile';
 import AdminCallbackList from './pages/AdminCallbackList';
 import Courses from './pages/Courses';
 import OnlineTraining from './pages/OnlineTraining';
+import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -49,6 +50,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/online-training" element={<OnlineTraining />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/dashboard" element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" replace />} />
             <Route path="/profile" element={isAuthenticated() ? <Profile /> : <Navigate to="/login" replace />} />
             
