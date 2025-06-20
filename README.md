@@ -32,16 +32,24 @@ computer-point-nepal/
 
 ## Setup Instructions
 
-1. Install dependencies:
+1. Install dependencies Frontend:
    ```bash
-   npm run install-all
+   cd frontend
+   npm i
    ```
 
-2. Configure environment variables:
+2.Install dependencies Frontend:
+```bash
+cd backend
+npm i
+```
+   
+
+3. Configure environment variables:
    - Copy `.env.example` to `.env` in the backend directory
    - Update the variables as needed
 
-3. Start the development servers:
+4. Start the development servers:
    ```bash
    npm start
    ```
