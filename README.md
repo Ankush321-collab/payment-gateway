@@ -1,4 +1,4 @@
-# Computer Point Nepal
+# Payment gateway
 
 A full-stack web application built using the MVC (Model-View-Controller) pattern.
 
